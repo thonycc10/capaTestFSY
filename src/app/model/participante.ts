@@ -4,6 +4,7 @@ export class Participante {
   idBarrio: number;
   idDistrito: number;
   nombre: string;
+  password: string;
   miembro: string;
   telefono: number;
   nombreRef: string;

@@ -9,13 +9,14 @@
 <div class="my-lg-5"  *ngIf="viewIngreso">
     <div class="row">
       <div class="col-md-4 col-xs-12 col-sm-6">
-        <iframe width="100%" height="380" src="https://www.youtube.com/embed/0O6dkFuBf7Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- autoplay -->
+        <video src="assets/video/siloamamos.mp4"  width="100%" height="380" playsinline  loop muted ></video>
       </div>
       <div class="col-md-4 col-xs-12 col-sm-6">
         <div class="ui-g text-center">
-          <p-card header="Convensión Jas SANO 2019" subheader="Bienvenido" [style]="{width: '360px'}" styleClass="ui-card-shadow">
+          <p-card header="Perú Lima Central 1 y 2" subheader="Bienvenido" [style]="{width: '360px'}" styleClass="ui-card-shadow">
             <p-header class="text-center" style="width: 100px">
-              <img src="Card" src="assets/img/poster.jpg" style="width: 100%; height: 150px;">
+              <img src="Card" src="assets/img/matrimonio.png" style="width: 100%; height: 150px;">
             </p-header>
             <div class="col-md-12">
               <section>
@@ -26,7 +27,10 @@
               </section>
               <br>
               <section>
-                <p-multiSelect [defaultLabel]="'¿De que estaca es?'" [options]="estacas" [(ngModel)]="participante.idEstaca" [selectionLimit]="1" [panelStyle]="{minWidth:'12em'}"></p-multiSelect>
+                <span class="ui-float-label">
+            <input [(ngModel)]="participante.password"  class="form-control" id="float-input" type="password" size="4" pInputText>
+            <label for="float-input">Password</label>
+          </span>
               </section>
             </div>
             <p *ngIf="existe" style="color: red">*USTED YA ESTA INSCRITO PARA LA CONVENSIÓN*</p>
@@ -37,13 +41,13 @@
         </div>
       </div>
       <div class="col-md-4 col-xs-12 col-sm-6">
-        <img src="Card" src="assets/img/sanoColor.png" style="width: 380px">
+        <img src="Card" src="assets/img/imgSimbolo.png" style="width: 380px">
       </div>
     </div>
   </div>
 <div class="my-lg-5 text-center" *ngIf="viewIngreso">
-  <h2><b>Lucas 22:32 </b></h2>
-  <h4>Pero yo he rogado por ti, que tu fe no falte; y tú, una vez <span><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/3.19?lang=spa#18">vuelto</a></span>, <span><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/108.7?lang=eng#6">fortalece</a></span> a tus hermanos.</h4>
+  <h2><b>Juan 14:15</b></h2>
+  <h4>“Si me <span><a href="https://www.churchofjesuschrist.org/study/scriptures/gs/love?lang=spa">amáis</a></span>, <span><a href="https://www.churchofjesuschrist.org/study/scriptures/gs/obedience-obedient-obey?lang=spa">guardad</a></span> mis <span><a href="https://www.churchofjesuschrist.org/study/scriptures/gs/commandments-of-god?lang=spa">mandamientos</a></span>”</h4>
 </div>
 <div class="ui-g my-2" *ngIf="viewDistrito">
   <div class="ui-g-12" [@animation]="'visible'">
